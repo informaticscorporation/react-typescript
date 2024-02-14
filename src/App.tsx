@@ -4,13 +4,13 @@ import './App.css';
 import { useState } from 'react';
 
 function App()  {
-  const [counter, setCounter] = useState<number>(0);
+  const [counter, setCounter] = useState(0);
 
-  function aggiungi(): void {
+  function aggiungi() {
     setCounter(counter + 1);
   }
 
-  function decrementa(): void {
+  function decrementa() {
     setCounter(counter - 1);
   }
 
