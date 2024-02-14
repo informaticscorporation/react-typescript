@@ -4,21 +4,15 @@ import './App.css';
 import { useState } from 'react';
 
 function App()  {
-  const [counter, setCounter] = useState(0);
+ const [random, setNumero] = useState <string | number >("genera numero");
 
-  function aggiungi() {
-    setCounter(counter + 1);
-  }
-
-  function decrementa() {
-    setCounter(counter - 1);
-  }
+function generaNumero() {
+  setNumero(Math.random());
+}
 
   return (
     <div>
-      <button onClick={aggiungi}>Incrementa</button>
-      <div style={{ color: counter < 0 ? 'red' : 'green' }}>{counter}</div>
-      <button onClick={decrementa}>Decrementa</button>
+      <button onClick={generaNumero}>{random}</button>
     </div>
   );
 }
